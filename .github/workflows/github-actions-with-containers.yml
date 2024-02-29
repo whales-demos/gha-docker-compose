@@ -1,0 +1,15 @@
+name: Runtimes Install With Containers
+run-name: Runtimes Install 🐳
+on: [push]
+jobs:
+   Install-Go-And-NodeJS:
+    runs-on: ubuntu-latest
+    container:
+      image: philippecharriere494/my-ubuntu-go-nodejs-env:0.0.1
+    steps:
+      - run: go version
+      - run: lsb_release -a
+      - run: node --version
+      # todo use a go code      
+# If I use it for every job, it will be huge
+
